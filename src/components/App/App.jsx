@@ -25,7 +25,7 @@ function App() {
   };
 
   const formSubmit = ({ name, number }) => {
-    const isContact = contacts.find(contact => contact.name === name);
+    const isContact = contacts.find(contact => contact.name.toLowerCase() === name.toLowerCase());
     if (isContact) {
       alert(`${name} is already in contact`);
     } else {
